@@ -1,0 +1,98 @@
+/* Topics page styles */
+.page-head {
+  text-align: center;
+  padding: 16px 0 36px;
+}
+
+.page-head h1 {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  color: var(--moss-900);
+  margin: 0 0 16px;
+  letter-spacing: -0.3px;
+}
+.page-head__lede {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  color: var(--muted);
+}
+
+.topics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.topic {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--moss-100);
+  border-radius: 14px;
+  padding: 24px 24px 24px 76px;
+  box-shadow: 0 3px 12px rgba(33,51,29,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+.topic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(33,51,29,0.1);
+  border-color: var(--moss-400);
+}
+
+.topic__num {
+  position: absolute;
+  left: 22px;
+  top: 24px;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--moss-300);
+  letter-spacing: -1px;
+}
+
+.topic h2 {
+  margin: 0 0 8px;
+  color: var(--moss-800);
+  font-size: 1.15rem;
+}
+.topic p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+@media (max-width: 700px) {
+  .topics { grid-template-columns: 1fr; }
+}
+
+.topics-cta {
+  margin-top: 40px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, var(--moss-50), var(--moss-100));
+  border: 1px solid var(--moss-200);
+  border-radius: 14px;
+  text-align: center;
+}
+.topics-cta p {
+  margin: 0 0 8px;
+  color: var(--moss-800);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.topics-cta__link {
+  text-decoration: none;
+  color: var(--moss-600);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.topics-cta__link:hover { color: var(--moss-800); }
+
+@media (max-width: 700px) {
+  .topics { grid-template-columns: 1fr; }
+  .topics-cta { padding: 22px 20px; }
+}

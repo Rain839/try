@@ -1,0 +1,141 @@
+/* Shared navbar + base theme — muted, earthy greens this is shared through all html files to have a same navbar */
+/*The root shi below is just a collection of colors that is hard to find or type so give it a name , root as a parent and their name themselves*/
+:root {
+  --paper: #f5f4ef;
+  --paper-2: #efece3;
+  --ink: #232a24;
+  --muted: #5a6358;
+
+  --moss-50: #eef1ea;
+  --moss-100: #dde4d6;
+  --moss-200: #c2d0b4;
+  --moss-300: #9fb58e;
+  --moss-400: #7c9a6b;
+  --moss-500: #5d7d4f;
+  --moss-600: #476b3c;
+  --moss-700: #385530;
+  --moss-800: #2c4326;
+  --moss-900: #21331d;
+
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-hi: rgba(255, 255, 255, 0.6);
+
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --sans: "Helvetica Neue", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Floating liquid-glass navbar (inline links) ---------- */
+.navbar {
+  position: fixed;
+
+  top: 16px;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  border-radius: 999px;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.5), rgba(221,228,214,0.18)),
+    linear-gradient(180deg, rgba(124,154,107,0.20), rgba(71,107,60,0.16));
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 0 0 var(--glass-hi),
+    inset 0 -1px 0 0 rgba(44,67,38,0.12),
+    0 10px 30px rgba(33,51,29,0.16);
+  max-width: calc(100vw - 24px);
+  overflow-x: auto;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 6px;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1px;
+  color: var(--moss-900);
+  white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,0.4);
+  margin-right: 4px;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.navbar__link {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--moss-900);
+  font-size: 0.92rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.navbar__link:hover {
+  background: rgba(124,154,107,0.18);
+  color: var(--moss-700);
+}
+.navbar__link:active { transform: scale(0.96); }
+.navbar__link.is-active {
+  background: linear-gradient(180deg, rgba(124,154,107,0.55), rgba(71,107,60,0.4));
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 2px 8px rgba(33,51,29,0.18);
+}
+
+/* ---------- Page shell ---------- */
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 110px 24px 72px;
+}
+
+.page__footer {
+  max-width: 880px;
+  margin: 48px auto 0;
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--moss-100);
+}
+
+@media (max-width: 600px) {
+  .navbar { 
+    gap: 0; 
+    padding: 6px 8px;
+   }
+  .navbar__brand { 
+    font-size: 0.88rem; 
+    padding: 4px 8px 4px 4px; }
+  .navbar__link {
+     padding: 7px 11px; 
+     font-size: 0.82rem; }
+  .page { 
+    padding: 100px 18px 56px;
+   }
+}
