@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green ICT · Printable Checklist</title>
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/checklist.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__brand">Green ICT</div>
+    <div class="navbar__links">
+      <a class="navbar__link" href="index.html">Home</a>
+      <a class="navbar__link" href="about.html">About us</a>
+      <a class="navbar__link" href="info.html">Info</a>
+      <a class="navbar__link" href="article.html">Articles</a>
+      <a class="navbar__link" href="topics.html">Topics</a>
+      <a class="navbar__link is-active" href="checklist.html">Checklist</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="page-head">
+      <h1>Your Green ICT action list</h1>
+      <p class="page-head__lede">
+        Print this page, stick it on your desk or beside your charger, and
+        check off what you already do. The items you leave unchecked are your
+        next steps.
+      </p>
+      <button class="checklist__print-btn" id="printChecklist" type="button">Print this checklist</button>
+    </header>
+
+    <div class="checklist-sheet" id="checklistSheet">
+      <div class="checklist-sheet__header">
+        <h2>Green ICT Student Checklist</h2>
+        <p>Small habits, big difference. Tick the boxes you already do.</p>
+      </div>
+
+      <div class="checklist-group">
+        <h3>Power</h3>
+        <ul class="checklist-items">
+          <li><span class="check-box"></span> Turn off my computer when I'm done using it</li>
+          <li><span class="check-box"></span> Enable sleep mode on my laptop after 5 minutes of inactivity</li>
+          <li><span class="check-box"></span> Unplug my phone charger when my phone is fully charged</li>
+          <li><span class="check-box"></span> Turn off the monitor when I step away from the desk</li>
+          <li><span class="check-box"></span> Use a power strip and switch it off at night</li>
+        </ul>
+      </div>
+
+      <div class="checklist-group">
+        <h3>Paper</h3>
+        <ul class="checklist-items">
+          <li><span class="check-box"></span> Take notes digitally instead of on paper</li>
+          <li><span class="check-box"></span> Submit assignments online when the option exists</li>
+          <li><span class="check-box"></span> Print double-sided only when printing is necessary</li>
+          <li><span class="check-box"></span> Read e-books or PDFs instead of printed handouts</li>
+          <li><span class="check-box"></span> Reuse the back of already-printed paper for scratch notes</li>
+        </ul>
+      </div>
+
+      <div class="checklist-group">
+        <h3>Devices</h3>
+        <ul class="checklist-items">
+          <li><span class="check-box"></span> Keep my phone for at least 3 years before upgrading</li>
+          <li><span class="check-box"></span> Use a case and screen protector to extend my phone's life</li>
+          <li><span class="check-box"></span> Repair a cracked screen or weak battery instead of replacing the whole device</li>
+          <li><span class="check-box"></span> Delete apps and files I don't use to keep my device running smoothly</li>
+          <li><span class="check-box"></span> Give away or sell old devices instead of leaving them in a drawer</li>
+        </ul>
+      </div>
+
+      <div class="checklist-group">
+        <h3>E-waste</h3>
+        <ul class="checklist-items">
+          <li><span class="check-box"></span> Never throw old batteries in the regular trash</li>
+          <li><span class="check-box"></span> Find my nearest e-waste recycling drop-off point</li>
+          <li><span class="check-box"></span> Drop off old chargers, cables, and earphones at a recycling center</li>
+          <li><span class="check-box"></span> Ask my school if they have an e-waste collection program</li>
+          <li><span class="check-box"></span> Tell at least one friend or family member about proper e-waste disposal</li>
+        </ul>
+      </div>
+
+      <div class="checklist-group">
+        <h3>Daily habits</h3>
+        <ul class="checklist-items">
+          <li><span class="check-box"></span> Close background tabs and apps I'm not using</li>
+          <li><span class="check-box"></span> Lower my screen brightness to a comfortable minimum</li>
+          <li><span class="check-box"></span> Download videos instead of streaming them repeatedly</li>
+          <li><span class="check-box"></span> Unsubscribe from emails I never read to reduce stored data</li>
+          <li><span class="check-box"></span> Walk, bike, or take public transit instead of asking for a ride</li>
+        </ul>
+      </div>
+
+      <div class="checklist-sheet__footer">
+        <p>Green ICT · Grade 12 STEM 3, Group 1 · S.Y. 2026 to 2027</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page__footer">
+    Green ICT · A resource for sustainable information technology.
+  </footer>
+
+  <script>
+    document.getElementById('printChecklist').addEventListener('click', function() {
+      window.print();
+    });
+  </script>
+</body>
+</html>

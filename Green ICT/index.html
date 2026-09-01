@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green ICT · Home</title>
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__brand">Green ICT</div>
+    <div class="navbar__links">
+      <a class="navbar__link is-active" href="index.html">Home</a>
+      <a class="navbar__link" href="about.html">About us</a>
+      <a class="navbar__link" href="info.html">Info</a>
+      <a class="navbar__link" href="article.html">Article</a>
+      <a class="navbar__link" href="topics.html">Topics</a>
+      <a class="navbar__link" href="checklist.html">Checklist</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="hero">
+      <h1 class="hero__title">Technology Shouldn't Cost The <span style="color: var(--moss-600)">EARTH.</span></h1>
+      <p class="hero__lede">
+        The computers, networks, and data centres we rely on every day come
+        with a hidden cost to the environment. Green ICT is about facing that
+        cost honestly and changing how we design, use, and retire technology
+        so the digital world treads more lightly on the physical one.
+      </p>
+    </section>
+
+    <figure class="hero__img">
+      <img src="https://images.pexels.com/photos/37730212/pexels-photo-37730212.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Server racks in a data center, representing the hidden energy cost of technology" loading="lazy" />
+      <figcaption>Data centres like this run around the clock. Most are still powered by fossil fuels.</figcaption>
+    </figure>
+
+    <section class="problems">
+      <h2 class="section-title">The problems ICT creates</h2>
+      <p class="section-intro">
+        Information and communication technology has transformed how we live
+        and work. But that progress has a footprint most of us never see.
+      </p>
+      <div class="problems__grid">
+        <article class="problem">
+          <h3>Heavy energy demand</h3>
+          <p>
+            Data centres, networks, and billions of devices run around the
+            clock, drawing electricity that is still largely generated from
+            fossil fuels. ICT now accounts for roughly two percent of global
+            greenhouse gas emissions, and that share keeps climbing.
+          </p>
+        </article>
+        <article class="problem">
+          <h3>A growing mountain of e-waste</h3>
+          <p>
+            Each year the world produces over fifty million tonnes of
+            discarded electronics. Much of it ends up in landfill, where
+            toxic components leach into soil and water, and valuable metals
+            are lost rather than recovered.
+          </p>
+        </article>
+        <article class="problem">
+          <h3>Manufacturing impact</h3>
+          <p>
+            Building a single laptop can emit hundreds of kilograms of carbon
+            dioxide and consume scarce metals and water. Short upgrade cycles
+            mean most of a device's lifetime footprint is created before it is
+            ever switched on.
+          </p>
+        </article>
+        <article class="problem">
+          <h3>Throwaway culture</h3>
+          <p>
+            Devices are increasingly hard to repair and quickly dropped from
+            support, so working hardware is scrapped long before the end of
+            its useful life, deepening both waste and emissions.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="calculator" id="calculator">
+      <h2 class="section-title">Your digital footprint</h2>
+      <p class="section-intro">
+        Curious how much carbon your daily tech use generates? This is a rough
+        estimate based on average power consumption figures, not a precise
+        measurement. But it gives you a sense of scale.
+      </p>
+      <div class="calc">
+        <div class="calc__inputs">
+          <label class="calc__field">
+            <span class="calc__label">Phone usage <small>hours per day</small></span>
+            <input type="range" id="phoneHrs" min="0" max="16" value="5" step="0.5" />
+            <span class="calc__value" id="phoneVal">5 hrs</span>
+          </label>
+          <label class="calc__field">
+            <span class="calc__label">Laptop / desktop <small>hours per day</small></span>
+            <input type="range" id="laptopHrs" min="0" max="16" value="6" step="0.5" />
+            <span class="calc__value" id="laptopVal">6 hrs</span>
+          </label>
+          <label class="calc__field">
+            <span class="calc__label">TV / gaming <small>hours per day</small></span>
+            <input type="range" id="tvHrs" min="0" max="12" value="2" step="0.5" />
+            <span class="calc__value" id="tvVal">2 hrs</span>
+          </label>
+          <label class="calc__field">
+            <span class="calc__label">Streaming video <small>hours per day</small></span>
+            <input type="range" id="streamHrs" min="0" max="12" value="2" step="0.5" />
+            <span class="calc__value" id="streamVal">2 hrs</span>
+          </label>
+        </div>
+        <div class="calc__result">
+          <div class="calc__result-box">
+            <span class="calc__result-num" id="resultNum">0</span>
+            <span class="calc__result-unit">kg CO₂ per year</span>
+          </div>
+          <p class="calc__result-desc" id="resultDesc"></p>
+          <p class="calc__disclaimer">
+            Based on average power draw: phone ~2W, laptop ~50W, TV ~100W,
+            streaming ~0.4 kg CO₂ per hour. Grid carbon intensity estimated
+            at 0.42 kg CO₂ per kWh. This is a rough educational estimate, not
+            a scientific measurement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="goals">
+      <h2 class="section-title">The goals of Green ICT</h2>
+      <p class="section-intro">
+        Green ICT sets out to shrink that footprint across the whole life of
+        technology, from factory to recycling bin. Its aims are simple and
+        practical.
+      </p>
+      <div class="goals__list">
+        <article class="goal">
+          <span class="goal__mark">01</span>
+          <div>
+            <h3>Reduce energy consumption</h3>
+            <p>Run hardware and software more efficiently, and power it with cleaner electricity wherever possible.</p>
+          </div>
+        </article>
+        <article class="goal">
+          <span class="goal__mark">02</span>
+          <div>
+            <h3>Keep devices in service longer</h3>
+            <p>Repair, refurbish, and reuse rather than replace, so the emissions baked into manufacturing pay off over more years.</p>
+          </div>
+        </article>
+        <article class="goal">
+          <span class="goal__mark">03</span>
+          <div>
+            <h3>Recover and recycle responsibly</h3>
+            <p>Keep electronics out of landfill and reclaim the metals and materials inside them through certified recycling.</p>
+          </div>
+        </article>
+       
+        <article class="goal">
+          <span class="goal__mark">04</span>
+          <div>
+            <h3>Promote sustainability</h3>
+            <p>Write code that needs less power and less hardware, and shift work to times and places where the grid is cleaner.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="closer">
+      <p>
+        None of this is about giving up technology. It is about using it with
+        care, so the tools we depend on do not cost the earth we live on.
+      </p>
+    </section>
+  </main>
+
+   <script>
+    (function() {
+      var phoneHrs = document.getElementById('phoneHrs');
+      var laptopHrs = document.getElementById('laptopHrs');
+      var tvHrs = document.getElementById('tvHrs');
+      var streamHrs = document.getElementById('streamHrs');
+      var phoneVal = document.getElementById('phoneVal');
+      var laptopVal = document.getElementById('laptopVal');
+      var tvVal = document.getElementById('tvVal');
+      var streamVal = document.getElementById('streamVal');
+      var resultNum = document.getElementById('resultNum');
+      var resultDesc = document.getElementById('resultDesc');
+
+      var GRID = 0.42;
+      var PHONE_W = 2;
+      var LAPTOP_W = 50;
+      var TV_W = 100;
+      var STREAM_KG = 0.4;
+
+      function calc() {
+        var p = parseFloat(phoneHrs.value);
+        var l = parseFloat(laptopHrs.value);
+        var t = parseFloat(tvHrs.value);
+        var s = parseFloat(streamHrs.value);
+
+        phoneVal.textContent = p + ' hrs';
+        laptopVal.textContent = l + ' hrs';
+        tvVal.textContent = t + ' hrs';
+        streamVal.textContent = s + ' hrs';
+
+        var phoneKg = p * 365 * PHONE_W / 1000 * GRID;
+        var laptopKg = l * 365 * LAPTOP_W / 1000 * GRID;
+        var tvKg = t * 365 * TV_W / 1000 * GRID;
+        var streamKg = s * 365 * STREAM_KG;
+        var total = phoneKg + laptopKg + tvKg + streamKg;
+
+        resultNum.textContent = Math.round(total);
+
+        if (total < 50) {
+          resultDesc.textContent = 'That is relatively low. Every bit still counts, and small habits add up over a year.';
+        } else if (total < 200) {
+          resultDesc.textContent = 'That is in the range of a typical student. Cutting streaming or device idle time can bring it down noticeably.';
+        } else if (total < 500) {
+          resultDesc.textContent = 'That is above average. Consider power-saving modes, unplugging idle devices, and reducing long streaming sessions.';
+        } else {
+          resultDesc.textContent = 'That is quite high. The biggest wins are usually cutting streaming hours and turning off devices you are not actively using.';
+        }
+      }
+
+      [phoneHrs, laptopHrs, tvHrs, streamHrs].forEach(function(el) {
+        el.addEventListener('input', calc);
+      });
+
+      calc();
+    })();
+  </script>
+
+  <footer class="page__footer">
+   12 STEM-3 · Green ICT
+  </footer>
+</body>
+</html>
